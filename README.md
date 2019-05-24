@@ -10,6 +10,32 @@ Currently, my collection includes:
 ### Collections
 
 1. enviro-collectd.py
+
+**Usage**
+
+```
+$ python3 enviro-collectd.py -h
+usage: enviro-collectd.py [-h] [-p PORT] [-i INTERVAL] [-d] [-f LOGFILE]
+                          [--debug] [--pid PID_FILE]
+
+Process some integers.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PORT, --port PORT  Port number to start http server. Default: 9090
+  -i INTERVAL, --interval INTERVAL
+                        Interval where the daemon get value from sensors.
+                        Default: 5 seconds
+  -d, --daemon          Run job in background. Default: False
+  -f LOGFILE, --log-file LOGFILE
+                        Log file. Default: /var/log/enviro-collectd.log
+  --debug               Whether to print debug log. Default: False
+  --pid PID_FILE        Path to pid file. Default: /var/run/enviro-
+                        collectd.pid
+
+$ python3 enviro-collectd.py -d --pid enviro.pid -f enviro.log
+```
+
 Enviro phat includes various sensors.
 
 * BMP280 temperature/pressure sensor
