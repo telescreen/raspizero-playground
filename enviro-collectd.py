@@ -112,7 +112,5 @@ if __name__ == '__main__':
             enviro_collector.start_background(args.pid_file)
         else:
             enviro_collector.start()
-    except OSError:
-        print('Address already in use')
     finally:
         logging.info('Stop collecting data from enviro')

@@ -1,0 +1,14 @@
+[Unit]
+Description=Collect and Expose sensors data for prometheus to scrape
+After=network-online.target
+
+[Service]
+Type=forking
+PIDFile=/var/run/enviro.pid
+ExecStart=/usr/bin/python3 /usr/local/bin/enviro-collectd.py -d --pid /var/run/enviro.pid -f /var/log/enviro.log
+ExecStop=/bin/kill -SIGTERM $MAINPID
+User=pi
+Group=pi
+
+[Install]
+WantedBy=default.target
