@@ -60,4 +60,10 @@ $ sudo apt install python3-envirophat
 $ sudo apt install prometheus-client
 ```
 
+Add scrape job to prometheus by
+
+```
+$ juju config prometheus2 scrape-jobs=@scrape-job.yaml
+```
+
 Visit [enviro-phat Github](https://github.com/pimoroni/enviro-phat) and [Prometheus Python Client Github](https://github.com/prometheus/client_python) for more information on how to install those tools.

@@ -1,0 +1,5 @@
+- job_name: 'envirophat'
+  metrics_path: '/'
+  scrape_interval: 1m
+  static_configs:
+    - targets: ['192.168.88.218:9090']
